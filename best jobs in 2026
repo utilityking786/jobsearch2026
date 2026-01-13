@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarkari Result 2026 | Latest Jobs, Admit Card, Results</title>
+    <meta name="description" content="Get latest updates on Sarkari Results, Government Jobs, Admit Cards, and Syllabus for UPSC, SSC, IBPS, and Railway Exams.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+        body { font-family: 'Roboto', sans-serif; transition: background-color 0.3s; }
+        .dark { background-color: #020617; color: #f1f5f9; }
+        .dark .bg-white { background-color: #0f172a; color: #f1f5f9; border-color: #1e293b; }
+        .dark .text-gray-600 { color: #94a3b8; }
+        .ticker-wrap { background: #fde047; color: #000; overflow: hidden; white-space: nowrap; padding: 10px 0; }
+        .ticker-move { display: inline-block; animation: ticker 30s linear infinite; }
+        @keyframes ticker { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+        .nav-link:hover { color: #2563eb; text-decoration: underline; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900" id="main-body">
+
+    <!-- Language & Dark Mode Bar -->
+    <div class="bg-blue-900 text-white px-4 py-1.5 flex justify-between items-center text-xs sm:text-sm">
+        <div class="flex gap-4">
+            <button onclick="setLang('en')" class="hover:underline">English</button>
+            <button onclick="setLang('hi')" class="hover:underline">हिन्दी</button>
+        </div>
+        <div class="flex items-center gap-4">
+            <span class="hidden sm:inline">Follow us: <i class="fab fa-telegram mx-1"></i> <i class="fab fa-whatsapp"></i></span>
+            <button onclick="toggleTheme()" class="bg-blue-800 p-1 px-3 rounded hover:bg-blue-700">
+                <i id="theme-icon" class="fas fa-moon"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="bg-white border-b sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <a href="/" class="text-3xl font-extrabold text-blue-800 tracking-tight">
+                SARKARI<span class="text-red-600">RESULT</span><span class="text-sm font-normal text-gray-500">.COM</span>
+            </a>
+            <nav class="flex flex-wrap justify-center gap-4 text-sm font-bold uppercase text-gray-700">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#latest-jobs" class="nav-link">Latest Jobs</a>
+                <a href="#results" class="nav-link">Results</a>
+                <a href="#admit-card" class="nav-link">Admit Card</a>
+                <a href="#syllabus" class="nav-link">Syllabus</a>
+                <a href="#answer-key" class="nav-link">Answer Key</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breaking News Ticker -->
+    <div class="ticker-wrap font-bold text-sm">
+        <div class="ticker-move">
+            SSC CGL 2025 Notification Released • UP Police Constable Exam Dates • IBPS PO Mains Admit Card Available • Railway RPF Constable Recruitment 2026 Apply Online •
+        </div>
+    </div>
+
+    <!-- Search & Hero -->
+    <section class="bg-gradient-to-r from-blue-700 to-blue-900 py-10 px-4">
+        <div class="container mx-auto text-center text-white">
+            <h1 class="text-2xl md:text-4xl font-bold mb-6">Latest Online Forms, Results & Admit Cards</h1>
+            <div class="max-w-xl mx-auto flex shadow-2xl">
+                <input type="text" id="jobSearch" placeholder="Ex: SSC, Railway, UPSC..." class="w-full p-4 rounded-l-md text-gray-900 focus:outline-none">
+                <button class="bg-red-600 px-6 rounded-r-md font-bold hover:bg-red-700 transition">SEARCH</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Grid -->
+    <main class="container mx-auto px-4 py-8">
+        
+        <!-- Top Ad Placeholder -->
+        <div class="w-full bg-gray-200 dark:bg-slate-800 h-24 mb-8 flex items-center justify-center border border-dashed border-gray-400 rounded-lg text-gray-400">
+            AdSense Responsive Header Unit
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- Result Section -->
+            <div id="results" class="bg-white border rounded shadow-sm overflow-hidden">
+                <div class="bg-red-600 text-white p-3 font-bold text-center">RESULTS</div>
+                <ul class="p-2 space-y-3">
+                    <li class="border-b pb-2"><a href="#" class="text-blue-700 hover:text-red-600 text-sm font-medium">UP Police Constable Result 2024 (Released)</a></li>
+                    <li class="border-b pb-2"><a href="#" class="text-blue-700 hover:text-red-600 text-sm font-medium">SSC MTS Final Result with Cutoff</a></li>
+                    <li class="border-b pb-2"><a href="#" class="text-blue-700 hover:text-red-600 text-sm font-medium">Bihar Vidhan Sabha Security Guard Result</a></li>
+                    <li class="border-b pb-2"><a href="#" class="text-blue-700 hover:text-red-600 text-sm font-medium">UPSC Civil Services Reserve List</a></li>
+                    <li class="text-center p-2"><a href="#" class="bg-gray-100 dark:bg-slate-700 block rounded py-1 text-xs font-bold">View More Results</a></li>
+                </ul>
+            </div>
+
+            <!-- Admit Card Section -->
+            <div id="admit-card" class="bg-white border rounded shadow-sm overflow-hidden">
+                <div class="bg-blue-600 text-white p-3 font-bold text-center">ADMIT CARD</div>
+                <ul class="p-2 space-y-3">
+                    <li class="border-b pb-2"><a href="#" class="text-blue-700 hover:text-red-600 text-sm font-medium">UGC NET June Admit Card 2025</a></li>
+                    <li class="border-b pb-2"><a href="#" class="text-blue-700 hover:text-red-600 text-sm font-medium">Railway RRB ALP Exam City Details</a></li>
+                    <li class="border-b pb-2"><a href="#" class="text-blue-700 hover:text-red-600 text-sm font-medium">NTA CUET PG Admit Card Download</a></li>
+                    <li class="border-b pb-2"><a href="#" class="text-blue-700 hover:text-red-600 text-sm font-medium">SSC Selection Post Phase XII Admit Card</a></li>
+                    <li class="text-center p-2"><a href="#" class="bg-gray-100 dark:bg-slate-700 block rounded py-1 text-xs font-bold">View More Admit Cards</a></li>
+                </ul>
+            </div>
+
+            <!-- Latest Jobs Section -->
+            <div id="latest-jobs" class="bg-white border rounded shadow-sm overflow-hidden">
+                <div class="bg-green-600 text-white p-3 font-bold text-center">LATEST JOBS</div>
+                <ul class="p-2 space-y-3">
+                    <li class="border-b pb-2"><a href="#" class="text-blue-700 hover:text-red-600 text-sm font-medium">India Post GDS 40,000+ Posts Recruit</a></li>
+                    <li class="border-b pb-2"><a href="#" class="text-blue-700 hover:text-red-600 text-sm font-medium">UPPSC RO ARO Exam Pre Online Form</a></li>
+                    <li class="border-b pb-2"><a href="#" class="text-blue-700 hover:text-red-600 text-sm font-medium">Bank of Baroda Acquisition Officer</a></li>
+                    <li class="border-b pb-2"><a href="#" class="text-blue-700 hover:text-red-600 text-sm font-medium">DSSSB Various Post Online Form 2025</a></li>
+                    <li class="text-center p-2"><a href="#" class="bg-gray-100 dark:bg-slate-700 block rounded py-1 text-xs font-bold">View More Jobs</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- SEO Article Content (Important for AdSense) -->
+        <article class="mt-12 bg-white p-6 border rounded-lg">
+            <h2 class="text-2xl font-bold mb-4 text-blue-800">Why Choose Sarkari Result for Govt Job Updates?</h2>
+            <p class="text-gray-600 mb-4">Sarkari Result is India's most popular informative portal for students looking for government jobs. We provide authentic and fast updates for various examinations like UPSC, State PSC, SSC, Banking, Railways, and more.</p>
+            
+            <h3 class="text-xl font-semibold mb-2">Frequently Asked Questions (FAQ)</h3>
+            <div class="space-y-4">
+                <div class="border-l-4 border-blue-600 pl-4">
+                    <p class="font-bold">How to check Sarkari Result online?</p>
+                    <p class="text-sm text-gray-500">Simply visit SarkariResult.com, click on the "Result" section on the homepage, and find your specific exam link.</p>
+                </div>
+                <div class="border-l-4 border-blue-600 pl-4">
+                    <p class="font-bold">What information is available here?</p>
+                    <p class="text-sm text-gray-500">We provide info on Online Forms, Admit Cards, Exam Dates, Results, Syllabus, Answer Keys, and Admission forms.</p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Detailed Footer (Essential for Compliance) -->
+    <footer class="bg-slate-900 text-slate-400 py-12 px-4 border-t border-slate-800">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="col-span-1 md:col-span-1">
+                <h4 class="text-white font-bold mb-4 uppercase tracking-widest">Sarkari Result</h4>
+                <p class="text-xs leading-relaxed">The No. 1 Portal for Government Job Seekers in India. Trusted by millions for over a decade.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase text-sm">Useful Links</h4>
+                <ul class="text-xs space-y-2">
+                    <li><a href="#" class="hover:text-white">UP Scholarships</a></li>
+                    <li><a href="#" class="hover:text-white">CCC Online Form</a></li>
+                    <li><a href="#" class="hover:text-white">PM Kisan Status</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase text-sm">Policies</h4>
+                <ul class="text-xs space-y-2">
+                    <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-white">Terms & Conditions</a></li>
+                    <li><a href="#" class="hover:text-white">Disclaimer</a></li>
+                    <li><a href="#" class="hover:text-white">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase text-sm">Connect</h4>
+                <div class="flex gap-4 text-xl">
+                    <i class="fab fa-facebook-f hover:text-white cursor-pointer"></i>
+                    <i class="fab fa-twitter hover:text-white cursor-pointer"></i>
+                    <i class="fab fa-youtube hover:text-white cursor-pointer"></i>
+                    <i class="fab fa-instagram hover:text-white cursor-pointer"></i>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto mt-10 pt-8 border-t border-slate-800 text-center text-xs">
+            <p>&copy; 2026 SarkariResult.com. All rights reserved. Not affiliated with any Government body.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            const body = document.getElementById('main-body');
+            const icon = document.getElementById('theme-icon');
+            body.classList.toggle('dark');
+            if(body.classList.contains('dark')) {
+                icon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                icon.classList.replace('fa-sun', 'fa-moon');
+            }
+        }
+
+        function setLang(lang) {
+            // Logic to change text content based on lang if needed
+            console.log("Language switched to: " + lang);
+        }
+
+        // Job Search filter logic
+        document.getElementById('jobSearch').addEventListener('keyup', function(e) {
+            const query = e.target.value.toLowerCase();
+            const items = document.querySelectorAll('li a');
+            items.forEach(item => {
+                if(item.innerText.toLowerCase().includes(query)) {
+                    item.parentElement.style.display = 'block';
+                } else {
+                    item.parentElement.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
