@@ -3,208 +3,309 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sarkari Result 2026 | Latest Jobs, Admit Card, Results</title>
-    <meta name="description" content="Get latest updates on Sarkari Results, Government Jobs, Admit Cards, and Syllabus for UPSC, SSC, IBPS, and Railway Exams.">
+    <title>Bahrain Job Portal - Search & Tools</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-        body { font-family: 'Roboto', sans-serif; transition: background-color 0.3s; }
-        .dark { background-color: #020617; color: #f1f5f9; }
-        .dark .bg-white { background-color: #0f172a; color: #f1f5f9; border-color: #1e293b; }
-        .dark .text-gray-600 { color: #94a3b8; }
-        .ticker-wrap { background: #fde047; color: #000; overflow: hidden; white-space: nowrap; padding: 10px 0; }
-        .ticker-move { display: inline-block; animation: ticker 30s linear infinite; }
-        @keyframes ticker { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
-        .nav-link:hover { color: #2563eb; text-decoration: underline; }
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Outfit', sans-serif; background-color: #f8fafc; }
+        .page { display: none; animation: fadeIn 0.4s ease-out; }
+        .page.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .nav-link.active { border-bottom: 3px solid #ef4444; color: #ef4444; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.08); }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900" id="main-body">
+<body>
 
-    <!-- Language & Dark Mode Bar -->
-    <div class="bg-blue-900 text-white px-4 py-1.5 flex justify-between items-center text-xs sm:text-sm">
-        <div class="flex gap-4">
-            <button onclick="setLang('en')" class="hover:underline">English</button>
-            <button onclick="setLang('hi')" class="hover:underline">हिन्दी</button>
+    <!-- Bahrain Themed Navbar -->
+    <nav class="bg-white text-slate-900 sticky top-0 z-50 shadow-sm border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-16">
+            <div class="flex items-center gap-2 cursor-pointer" onclick="navigateTo('home')">
+                <div class="bg-red-600 p-1.5 rounded-lg text-white">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <span class="font-extrabold text-xl tracking-tight text-slate-800">BAHRAIN<span class="text-red-600">JOBS</span></span>
+            </div>
+            
+            <div class="hidden md:flex gap-8 font-semibold text-sm">
+                <button onclick="navigateTo('home')" class="nav-link py-5 active" id="btn-home">Jobs in Bahrain</button>
+                <button onclick="navigateTo('converter')" class="nav-link py-5" id="btn-converter">CV & Doc Tools</button>
+                <button onclick="navigateTo('info')" class="nav-link py-5" id="btn-info">LMRA Info</button>
+                <button onclick="navigateTo('about')" class="nav-link py-5" id="btn-about">Contact</button>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <span class="text-xs font-bold text-slate-400 hidden sm:block">MANAMA, BH</span>
+                <button class="bg-red-600 text-white px-5 py-2 rounded-full font-bold text-xs hover:bg-red-700 transition shadow-md">
+                    POST A JOB
+                </button>
+            </div>
         </div>
-        <div class="flex items-center gap-4">
-            <span class="hidden sm:inline">Follow us: <i class="fab fa-telegram mx-1"></i> <i class="fab fa-whatsapp"></i></span>
-            <button onclick="toggleTheme()" class="bg-blue-800 p-1 px-3 rounded hover:bg-blue-700">
-                <i id="theme-icon" class="fas fa-moon"></i>
-            </button>
+    </nav>
+
+    <!-- Page 1: BAHRAIN JOB SEARCH -->
+    <div id="page-home" class="page active max-w-7xl mx-auto py-8 px-4">
+        <!-- Bahrain Hero -->
+        <div class="relative overflow-hidden bg-slate-900 rounded-3xl p-8 mb-10 text-white shadow-2xl min-h-[300px] flex flex-col justify-center">
+            <div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+                <svg viewBox="0 0 100 100" class="h-full w-full fill-red-600">
+                    <polygon points="0,0 100,0 100,100 0,100 20,50" />
+                </svg>
+            </div>
+            <div class="relative z-10">
+                <span class="bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold mb-4 inline-block">Direct Hiring 2024</span>
+                <h1 class="text-4xl md:text-5xl font-black mb-4">Find Your Dream Job in Bahrain</h1>
+                <p class="mb-8 opacity-80 text-lg max-w-2xl">Browse vacancies in Manama, Muharraq, Riffa, and Seef. Engineering, Retail, Finance, and Hospital roles available.</p>
+                <div class="flex flex-col md:flex-row gap-3 max-w-3xl">
+                    <input type="text" placeholder="Job Title (e.g. Accountant, Driver, Nurse)" class="flex-1 px-6 py-4 rounded-2xl text-slate-900 focus:outline-none focus:ring-4 focus:ring-red-400">
+                    <select class="px-6 py-4 rounded-2xl text-slate-900 font-medium">
+                        <option>All Cities</option>
+                        <option>Manama</option>
+                        <option>Seef</option>
+                        <option>Muharraq</option>
+                        <option>Riffa</option>
+                    </select>
+                    <button class="bg-red-600 text-white px-10 py-4 rounded-2xl font-bold hover:bg-red-700 transition shadow-lg">SEARCH</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid lg:grid-cols-4 gap-8">
+            <!-- Filter Sidebar -->
+            <div class="hidden lg:block space-y-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                    <h3 class="font-bold mb-4 text-slate-800 flex items-center gap-2">
+                        <i class="fas fa-filter text-red-600"></i> Sector
+                    </h3>
+                    <div class="space-y-3 text-sm text-slate-600">
+                        <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" class="w-4 h-4 accent-red-600"> Hospitality & Tourism</label>
+                        <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" class="w-4 h-4 accent-red-600"> Banking & Fintech</label>
+                        <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" class="w-4 h-4 accent-red-600"> Oil & Gas (BAPCO)</label>
+                        <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" class="w-4 h-4 accent-red-600"> Construction & Eng.</label>
+                        <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" class="w-4 h-4 accent-red-600"> IT & Digital</label>
+                    </div>
+                </div>
+
+                <div class="bg-red-50 p-6 rounded-2xl border border-red-100">
+                    <h4 class="font-bold text-red-800 mb-2">Visa Alert</h4>
+                    <p class="text-xs text-red-700 leading-relaxed">Always verify your Work Permit status on the official LMRA website before joining any company.</p>
+                </div>
+            </div>
+
+            <!-- Job Listings -->
+            <div class="lg:col-span-3 space-y-4">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-2xl font-black text-slate-800 tracking-tight">Latest Vacancies</h2>
+                    <div class="flex gap-2">
+                        <span class="px-3 py-1 bg-white border border-slate-200 rounded-lg text-xs font-bold text-slate-500">Sorted by Newest</span>
+                    </div>
+                </div>
+
+                <!-- Job Card 1 -->
+                <div class="card-hover bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6 transition-all">
+                    <div class="flex gap-5 items-center w-full">
+                        <div class="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-700 font-bold border border-slate-100">
+                            <i class="fas fa-hotel text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-1">
+                                <h3 class="font-bold text-xl text-slate-800">Receptionist & Guest Relations</h3>
+                                <span class="bg-green-100 text-green-700 px-2 py-0.5 rounded text-[10px] font-bold uppercase">Full Time</span>
+                            </div>
+                            <p class="text-slate-500 text-sm font-medium">Grand Hotel Bahrain | <i class="fas fa-map-marker-alt text-red-500 ml-1"></i> Seef District</p>
+                            <div class="mt-2 flex gap-4 text-xs font-bold text-slate-400">
+                                <span><i class="far fa-clock mr-1"></i> 2 Hours Ago</span>
+                                <span class="text-blue-600"><i class="fas fa-coins mr-1"></i> 450 - 600 BHD</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-auto">
+                        <button class="w-full md:w-auto bg-slate-900 text-white px-8 py-3 rounded-xl font-bold hover:bg-slate-800 transition">Apply</button>
+                    </div>
+                </div>
+
+                <!-- Job Card 2 -->
+                <div class="card-hover bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6 transition-all">
+                    <div class="flex gap-5 items-center w-full">
+                        <div class="w-16 h-16 bg-red-50 rounded-2xl flex items-center justify-center text-red-600 font-bold border border-red-100">
+                            <i class="fas fa-tools text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-1">
+                                <h3 class="font-bold text-xl text-slate-800">Civil Engineer (Project)</h3>
+                                <span class="bg-blue-100 text-blue-700 px-2 py-0.5 rounded text-[10px] font-bold uppercase">Contract</span>
+                            </div>
+                            <p class="text-slate-500 text-sm font-medium">Al-Khalifa Const. Group | <i class="fas fa-map-marker-alt text-red-500 ml-1"></i> Sitra</p>
+                            <div class="mt-2 flex gap-4 text-xs font-bold text-slate-400">
+                                <span><i class="far fa-clock mr-1"></i> 1 Day Ago</span>
+                                <span class="text-blue-600"><i class="fas fa-coins mr-1"></i> Negotiable</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-auto">
+                        <button class="w-full md:w-auto bg-slate-900 text-white px-8 py-3 rounded-xl font-bold hover:bg-slate-800 transition">Apply</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Main Navigation -->
-    <header class="bg-white border-b sticky top-0 z-50 shadow-sm">
-        <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
-            <a href="/" class="text-3xl font-extrabold text-blue-800 tracking-tight">
-                SARKARI<span class="text-red-600">RESULT</span><span class="text-sm font-normal text-gray-500">.COM</span>
-            </a>
-            <nav class="flex flex-wrap justify-center gap-4 text-sm font-bold uppercase text-gray-700">
-                <a href="#" class="nav-link">Home</a>
-                <a href="#latest-jobs" class="nav-link">Latest Jobs</a>
-                <a href="#results" class="nav-link">Results</a>
-                <a href="#admit-card" class="nav-link">Admit Card</a>
-                <a href="#syllabus" class="nav-link">Syllabus</a>
-                <a href="#answer-key" class="nav-link">Answer Key</a>
-            </nav>
+    <!-- Page 2: CV CONVERTER (For Job Apps) -->
+    <div id="page-converter" class="page max-w-4xl mx-auto py-12 px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-black text-slate-900 mb-3">Passport & CV Scanner</h2>
+            <p class="text-slate-500 text-lg">Format your documents correctly for Bahraini portals.</p>
         </div>
-    </header>
 
-    <!-- Breaking News Ticker -->
-    <div class="ticker-wrap font-bold text-sm">
-        <div class="ticker-move">
-            SSC CGL 2025 Notification Released • UP Police Constable Exam Dates • IBPS PO Mains Admit Card Available • Railway RPF Constable Recruitment 2026 Apply Online •
+        <div class="bg-white rounded-[2.5rem] shadow-xl p-10 border border-slate-100">
+            <div id="drop-zone" class="border-4 border-dashed border-slate-100 bg-slate-50/50 rounded-[2rem] p-20 text-center cursor-pointer hover:border-red-400 hover:bg-red-50/20 transition-all group">
+                <input type="file" id="fileInput" class="hidden" accept="image/*">
+                <div class="w-20 h-20 bg-white rounded-2xl shadow-sm flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition">
+                    <i class="fas fa-cloud-upload-alt text-4xl text-red-500"></i>
+                </div>
+                <h3 class="text-2xl font-extrabold text-slate-700">Upload Doc Image</h3>
+                <p class="text-slate-400 mt-2 font-medium">Click to browse or drag & drop</p>
+            </div>
+
+            <div id="preview-section" class="mt-10 hidden">
+                <div class="bg-slate-50 p-6 rounded-3xl flex flex-col md:flex-row gap-10 items-center">
+                    <div class="relative">
+                        <img id="imgPreview" class="w-56 h-72 object-cover bg-white rounded-2xl shadow-lg border-4 border-white">
+                        <div class="absolute -top-3 -right-3 bg-red-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">1</div>
+                    </div>
+                    <div class="flex-1 w-full space-y-6">
+                        <div>
+                            <label class="block text-sm font-black text-slate-800 uppercase tracking-widest mb-4">Export As</label>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <button onclick="convert('application/pdf')" class="flex items-center justify-center gap-3 p-4 bg-red-600 text-white rounded-2xl font-bold hover:bg-red-700 transition shadow-lg shadow-red-200">
+                                    <i class="fas fa-file-pdf"></i> Save as PDF
+                                </button>
+                                <button onclick="convert('image/jpeg')" class="flex items-center justify-center gap-3 p-4 bg-slate-900 text-white rounded-2xl font-bold hover:bg-slate-800 transition">
+                                    <i class="fas fa-file-image"></i> High-Res JPG
+                                </button>
+                            </div>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200">
+                            <button onclick="location.reload()" class="text-slate-400 text-sm font-bold hover:text-red-600 transition">
+                                <i class="fas fa-redo-alt mr-2"></i> Start Over
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Search & Hero -->
-    <section class="bg-gradient-to-r from-blue-700 to-blue-900 py-10 px-4">
-        <div class="container mx-auto text-center text-white">
-            <h1 class="text-2xl md:text-4xl font-bold mb-6">Latest Online Forms, Results & Admit Cards</h1>
-            <div class="max-w-xl mx-auto flex shadow-2xl">
-                <input type="text" id="jobSearch" placeholder="Ex: SSC, Railway, UPSC..." class="w-full p-4 rounded-l-md text-gray-900 focus:outline-none">
-                <button class="bg-red-600 px-6 rounded-r-md font-bold hover:bg-red-700 transition">SEARCH</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Main Content Grid -->
-    <main class="container mx-auto px-4 py-8">
-        
-        <!-- Top Ad Placeholder -->
-        <div class="w-full bg-gray-200 dark:bg-slate-800 h-24 mb-8 flex items-center justify-center border border-dashed border-gray-400 rounded-lg text-gray-400">
-            AdSense Responsive Header Unit
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            
-            <!-- Result Section -->
-            <div id="results" class="bg-white border rounded shadow-sm overflow-hidden">
-                <div class="bg-red-600 text-white p-3 font-bold text-center">RESULTS</div>
-                <ul class="p-2 space-y-3">
-                    <li class="border-b pb-2"><a href="#" class="text-blue-700 hover:text-red-600 text-sm font-medium">UP Police Constable Result 2024 (Released)</a></li>
-                    <li class="border-b pb-2"><a href="#" class="text-blue-700 hover:text-red-600 text-sm font-medium">SSC MTS Final Result with Cutoff</a></li>
-                    <li class="border-b pb-2"><a href="#" class="text-blue-700 hover:text-red-600 text-sm font-medium">Bihar Vidhan Sabha Security Guard Result</a></li>
-                    <li class="border-b pb-2"><a href="#" class="text-blue-700 hover:text-red-600 text-sm font-medium">UPSC Civil Services Reserve List</a></li>
-                    <li class="text-center p-2"><a href="#" class="bg-gray-100 dark:bg-slate-700 block rounded py-1 text-xs font-bold">View More Results</a></li>
-                </ul>
-            </div>
-
-            <!-- Admit Card Section -->
-            <div id="admit-card" class="bg-white border rounded shadow-sm overflow-hidden">
-                <div class="bg-blue-600 text-white p-3 font-bold text-center">ADMIT CARD</div>
-                <ul class="p-2 space-y-3">
-                    <li class="border-b pb-2"><a href="#" class="text-blue-700 hover:text-red-600 text-sm font-medium">UGC NET June Admit Card 2025</a></li>
-                    <li class="border-b pb-2"><a href="#" class="text-blue-700 hover:text-red-600 text-sm font-medium">Railway RRB ALP Exam City Details</a></li>
-                    <li class="border-b pb-2"><a href="#" class="text-blue-700 hover:text-red-600 text-sm font-medium">NTA CUET PG Admit Card Download</a></li>
-                    <li class="border-b pb-2"><a href="#" class="text-blue-700 hover:text-red-600 text-sm font-medium">SSC Selection Post Phase XII Admit Card</a></li>
-                    <li class="text-center p-2"><a href="#" class="bg-gray-100 dark:bg-slate-700 block rounded py-1 text-xs font-bold">View More Admit Cards</a></li>
-                </ul>
-            </div>
-
-            <!-- Latest Jobs Section -->
-            <div id="latest-jobs" class="bg-white border rounded shadow-sm overflow-hidden">
-                <div class="bg-green-600 text-white p-3 font-bold text-center">LATEST JOBS</div>
-                <ul class="p-2 space-y-3">
-                    <li class="border-b pb-2"><a href="#" class="text-blue-700 hover:text-red-600 text-sm font-medium">India Post GDS 40,000+ Posts Recruit</a></li>
-                    <li class="border-b pb-2"><a href="#" class="text-blue-700 hover:text-red-600 text-sm font-medium">UPPSC RO ARO Exam Pre Online Form</a></li>
-                    <li class="border-b pb-2"><a href="#" class="text-blue-700 hover:text-red-600 text-sm font-medium">Bank of Baroda Acquisition Officer</a></li>
-                    <li class="border-b pb-2"><a href="#" class="text-blue-700 hover:text-red-600 text-sm font-medium">DSSSB Various Post Online Form 2025</a></li>
-                    <li class="text-center p-2"><a href="#" class="bg-gray-100 dark:bg-slate-700 block rounded py-1 text-xs font-bold">View More Jobs</a></li>
-                </ul>
-            </div>
-
-        </div>
-
-        <!-- SEO Article Content (Important for AdSense) -->
-        <article class="mt-12 bg-white p-6 border rounded-lg">
-            <h2 class="text-2xl font-bold mb-4 text-blue-800">Why Choose Sarkari Result for Govt Job Updates?</h2>
-            <p class="text-gray-600 mb-4">Sarkari Result is India's most popular informative portal for students looking for government jobs. We provide authentic and fast updates for various examinations like UPSC, State PSC, SSC, Banking, Railways, and more.</p>
-            
-            <h3 class="text-xl font-semibold mb-2">Frequently Asked Questions (FAQ)</h3>
-            <div class="space-y-4">
-                <div class="border-l-4 border-blue-600 pl-4">
-                    <p class="font-bold">How to check Sarkari Result online?</p>
-                    <p class="text-sm text-gray-500">Simply visit SarkariResult.com, click on the "Result" section on the homepage, and find your specific exam link.</p>
+    <!-- Page 3: LMRA INFO -->
+    <div id="page-info" class="page max-w-5xl mx-auto py-12 px-4">
+        <h2 class="text-3xl font-black text-slate-900 mb-8 flex items-center gap-3">
+             Guide to Working in Bahrain
+        </h2>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
+                <div class="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center text-red-600 mb-6">
+                    <i class="fas fa-passport text-xl"></i>
                 </div>
-                <div class="border-l-4 border-blue-600 pl-4">
-                    <p class="font-bold">What information is available here?</p>
-                    <p class="text-sm text-gray-500">We provide info on Online Forms, Admit Cards, Exam Dates, Results, Syllabus, Answer Keys, and Admission forms.</p>
+                <h3 class="text-xl font-bold mb-3">Work Permits (LMRA)</h3>
+                <p class="text-slate-600 text-sm leading-relaxed mb-4">The Labour Market Regulatory Authority (LMRA) is the main body for all work visas. Before signing an offer, check your employer's CR status.</p>
+                <a href="#" class="text-red-600 font-bold text-sm hover:underline">Verify Application Status →</a>
+            </div>
+            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
+                <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 mb-6">
+                    <i class="fas fa-id-card text-xl"></i>
                 </div>
+                <h3 class="text-xl font-bold mb-3">CPR & Residency</h3>
+                <p class="text-slate-600 text-sm leading-relaxed mb-4">Once your visa is issued, you will receive a CPR (National ID). This is essential for opening bank accounts and renting property.</p>
+                <a href="#" class="text-blue-600 font-bold text-sm hover:underline">CPR Appointment Guide →</a>
             </div>
-        </article>
-    </main>
+        </div>
+    </div>
 
-    <!-- Detailed Footer (Essential for Compliance) -->
-    <footer class="bg-slate-900 text-slate-400 py-12 px-4 border-t border-slate-800">
-        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div class="col-span-1 md:col-span-1">
-                <h4 class="text-white font-bold mb-4 uppercase tracking-widest">Sarkari Result</h4>
-                <p class="text-xs leading-relaxed">The No. 1 Portal for Government Job Seekers in India. Trusted by millions for over a decade.</p>
-            </div>
-            <div>
-                <h4 class="text-white font-bold mb-4 uppercase text-sm">Useful Links</h4>
-                <ul class="text-xs space-y-2">
-                    <li><a href="#" class="hover:text-white">UP Scholarships</a></li>
-                    <li><a href="#" class="hover:text-white">CCC Online Form</a></li>
-                    <li><a href="#" class="hover:text-white">PM Kisan Status</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-white font-bold mb-4 uppercase text-sm">Policies</h4>
-                <ul class="text-xs space-y-2">
-                    <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
-                    <li><a href="#" class="hover:text-white">Terms & Conditions</a></li>
-                    <li><a href="#" class="hover:text-white">Disclaimer</a></li>
-                    <li><a href="#" class="hover:text-white">Contact Us</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-white font-bold mb-4 uppercase text-sm">Connect</h4>
-                <div class="flex gap-4 text-xl">
-                    <i class="fab fa-facebook-f hover:text-white cursor-pointer"></i>
-                    <i class="fab fa-twitter hover:text-white cursor-pointer"></i>
-                    <i class="fab fa-youtube hover:text-white cursor-pointer"></i>
-                    <i class="fab fa-instagram hover:text-white cursor-pointer"></i>
+    <!-- Page 4: ABOUT -->
+    <div id="page-about" class="page max-w-4xl mx-auto py-12 px-4">
+        <div class="bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-100">
+            <h2 class="text-3xl font-black text-slate-900 mb-6 border-b border-slate-100 pb-4">Bahrain Jobs Portal</h2>
+            <div class="prose text-slate-600 space-y-4 font-medium">
+                <p>Humari website Bahrain ke expatriates aur locals ko behtareen job opportunities se connect karne ke liye banai gayi hai.</p>
+                <p><strong>Bahrain</strong> ek friendly mulk hai jahan job dhoondna aasan hai agar aapke paas sahi tools hon. Is portal par hum na sirf jobs dikhate hain, balki aapko document scan karne aur PDF banane ki sahulat bhi dete hain jo Bahraini portals (jaise LMRA ya Majra) par upload karne ke liye lazmi hoti hai.</p>
+                <div class="bg-slate-50 p-6 rounded-2xl mt-8">
+                    <h4 class="font-bold text-slate-800 mb-2">Contact Support</h4>
+                    <p class="text-sm">Technical issues ya job posting ke liye humein email karein: <span class="text-red-600 font-bold">support@bahrainjobsportal.com</span></p>
                 </div>
             </div>
         </div>
-        <div class="container mx-auto mt-10 pt-8 border-t border-slate-800 text-center text-xs">
-            <p>&copy; 2026 SarkariResult.com. All rights reserved. Not affiliated with any Government body.</p>
+    </div>
+
+    <footer class="mt-20 py-12 bg-slate-900 text-white text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="font-bold opacity-60 text-sm mb-2">Serving Manama, Riffa, Muharraq & Isa Town</p>
+            <p class="text-xs opacity-40">© 2024 Bahrain Jobs Media. Not an official Government entity.</p>
         </div>
     </footer>
 
+    <canvas id="conversionCanvas" class="hidden"></canvas>
+
     <script>
-        function toggleTheme() {
-            const body = document.getElementById('main-body');
-            const icon = document.getElementById('theme-icon');
-            body.classList.toggle('dark');
-            if(body.classList.contains('dark')) {
-                icon.classList.replace('fa-moon', 'fa-sun');
-            } else {
-                icon.classList.replace('fa-sun', 'fa-moon');
-            }
+        // Navigation Logic
+        function navigateTo(pageId) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById('page-' + pageId).classList.add('active');
+            
+            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+            const activeBtn = document.getElementById('btn-' + pageId);
+            if(activeBtn) activeBtn.classList.add('active');
+            window.scrollTo({top: 0, behavior: 'smooth'});
         }
 
-        function setLang(lang) {
-            // Logic to change text content based on lang if needed
-            console.log("Language switched to: " + lang);
-        }
+        // Converter Logic
+        const dropZone = document.getElementById('drop-zone');
+        const fileInput = document.getElementById('fileInput');
+        const preview = document.getElementById('preview-section');
+        const imgElement = document.getElementById('imgPreview');
+        const canvas = document.getElementById('conversionCanvas');
 
-        // Job Search filter logic
-        document.getElementById('jobSearch').addEventListener('keyup', function(e) {
-            const query = e.target.value.toLowerCase();
-            const items = document.querySelectorAll('li a');
-            items.forEach(item => {
-                if(item.innerText.toLowerCase().includes(query)) {
-                    item.parentElement.style.display = 'block';
-                } else {
-                    item.parentElement.style.display = 'none';
-                }
-            });
-        });
+        dropZone.onclick = () => fileInput.click();
+        
+        fileInput.onchange = (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = (event) => {
+                imgElement.src = event.target.result;
+                preview.classList.remove('hidden');
+                dropZone.classList.add('hidden');
+            };
+            reader.readAsDataURL(file);
+        };
+
+        function convert(format) {
+            const ctx = canvas.getContext('2d');
+            const img = new Image();
+            img.onload = () => {
+                // Resize for web optimization
+                const scale = Math.min(1, 1200 / img.width);
+                canvas.width = img.width * scale;
+                canvas.height = img.height * scale;
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                
+                // Simulating download
+                const finalFormat = format === 'application/pdf' ? 'image/jpeg' : format;
+                const dataUrl = canvas.toDataURL(finalFormat, 0.85);
+                
+                const link = document.createElement('a');
+                link.download = `Bahrain-App-Doc-${Date.now()}.${format.split('/')[1]}`;
+                link.href = dataUrl;
+                link.click();
+
+                const btn = event.currentTarget;
+                const originalContent = btn.innerHTML;
+                btn.innerHTML = "<i class='fas fa-check'></i> Downloaded!";
+                setTimeout(() => btn.innerHTML = originalContent, 3000);
+            };
+            img.src = imgElement.src;
+        }
     </script>
 </body>
 </html>
